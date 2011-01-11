@@ -1,4 +1,4 @@
-package t3.samples.portlets.css;
+package t3.samples.portlets;
 
 import java.io.IOException;
 

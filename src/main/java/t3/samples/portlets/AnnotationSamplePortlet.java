@@ -1,6 +1,6 @@
-package t3.samples.portlets.annotation;
+package t3.samples.portlets;
 
-import t3.samples.portlets.RenderingUtils;
+import t3.samples.portlets.util.RenderingUtils;
 
 import org.w3c.dom.Element;
 

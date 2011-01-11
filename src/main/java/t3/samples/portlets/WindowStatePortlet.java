@@ -1,4 +1,4 @@
-package t3.samples.portlets.windowstate;
+package t3.samples.portlets;
 
 import java.io.IOException;
 import java.io.PrintWriter;

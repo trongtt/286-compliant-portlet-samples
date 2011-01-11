@@ -1,4 +1,4 @@
-package t3.samples.portlets;
+package t3.samples.portlets.util;
 
 import java.io.IOException;
 import java.io.PrintWriter;

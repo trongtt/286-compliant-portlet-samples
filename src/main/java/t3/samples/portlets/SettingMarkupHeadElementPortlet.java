@@ -1,4 +1,4 @@
-package t3.samples.portlets.markup.headers;
+package t3.samples.portlets;
 
 import org.w3c.dom.Element;
 

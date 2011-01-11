@@ -1,46 +1,44 @@
-package t3.samples.portlets.parameters;
+package t3.samples.portlets;
 
-import t3.samples.portlets.RenderingUtils;
+import t3.samples.portlets.util.RenderingUtils;
+
+import org.w3c.dom.Element;
 
 import java.io.IOException;
 import java.io.PrintWriter;
 
 import javax.portlet.ActionRequest;
-import javax.portlet.ActionResponse;
 import javax.portlet.GenericPortlet;
+import javax.portlet.MimeResponse;
 import javax.portlet.PortletException;
+import javax.portlet.PortletMode;
 import javax.portlet.PortletURL;
 import javax.portlet.RenderRequest;
 import javax.portlet.RenderResponse;
 
-public class SharingPublicRenderParametersPortlet extends GenericPortlet {
-   
+public class URLPropertySamplePortlet extends GenericPortlet
+{
    @Override
    protected void doView(RenderRequest request, RenderResponse response) throws PortletException, IOException
    {
       response.setContentType("text/html");
       PrintWriter w = response.getWriter();
       w.write("<div class=\"portlet-section-header\">This is VIEW mode of sample portlet that is implemented by using Annotation</div>");
-
+      
       PortletURL actionURL = response.createActionURL();
-//      actionURL.setParameter("testing", "testing value");
+      actionURL.setParameter(ActionRequest.ACTION_NAME, "sayhello");
+      actionURL.addProperty("property1", "value1");
+      
       w.write("<p> Click <a href=\"" + actionURL.toString()
-         + "\">here</a> to execute a Action URL");
+         + "\">here</a> to execute a Action URL with following parameters :");
       
       PortletURL renderURL = response.createRenderURL();
-      renderURL.setParameter("zip-id", "newValues");
-      renderURL.setParameter("param1", "value1");
-      renderURL.setParameter("param2", "value2");
+      renderURL.setPortletMode(PortletMode.EDIT);
       w.write("<p> Click <a href=\"" + renderURL.toString()
-         + "\">here</a> to execute a Render URL");
+         + "\">here</a> to switch to EDIT mode");
+      Element element = response.createElement("title");
+      element.setTextContent("Hello the world 1");
+      response.addProperty(MimeResponse.MARKUP_HEAD_ELEMENT, element);
       RenderingUtils.renderRenderParemeters(request, response);
-   }
-   
-   @Override
-   public void processAction(ActionRequest request, ActionResponse response) throws PortletException, IOException
-   {
-//      response.setRenderParameter("zip-id", "Public render parameter 1");
-      System.out.println("\n\n=====" + request.getParameter("testing"));
-      System.out.println("\n\n=====" + request.getParameter("zip-id"));
    }
 }

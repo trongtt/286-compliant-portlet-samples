@@ -1,6 +1,6 @@
-package t3.samples.portlets.renderparameters;
+package t3.samples.portlets;
 
-import t3.samples.portlets.RenderingUtils;
+import t3.samples.portlets.util.RenderingUtils;
 
 import java.io.IOException;
 import java.io.PrintWriter;
@@ -23,8 +23,10 @@ public class SharingPublicRenderParametersPortlet extends GenericPortlet {
       w.write("<div class=\"portlet-section-header\">This is VIEW mode of sample portlet that is implemented by using Annotation</div>");
 
       PortletURL actionURL = response.createActionURL();
+//      actionURL.setParameter("testing", "testing value");
       w.write("<p> Click <a href=\"" + actionURL.toString()
          + "\">here</a> to execute a Action URL");
+      
       PortletURL renderURL = response.createRenderURL();
       renderURL.setParameter("zip-id", "newValues");
       renderURL.setParameter("param1", "value1");
@@ -37,6 +39,8 @@ public class SharingPublicRenderParametersPortlet extends GenericPortlet {
    @Override
    public void processAction(ActionRequest request, ActionResponse response) throws PortletException, IOException
    {
-      response.setRenderParameter("zip-id", "Public render parameter 1");
+//      response.setRenderParameter("zip-id", "Public render parameter 1");
+      System.out.println("\n\n=====" + request.getParameter("testing"));
+      System.out.println("\n\n=====" + request.getParameter("zip-id"));
    }
 }

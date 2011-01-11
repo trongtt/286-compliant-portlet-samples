@@ -6,7 +6,7 @@
       <description>A sample portlet implementation by using Annotation</description>
       <portlet-name>AnnotationSamplePortlet</portlet-name>
       <display-name>Annotation Sample Portlet</display-name>
-      <portlet-class>t3.samples.portlets.annotation.AnnotationSamplePortlet</portlet-class>
+      <portlet-class>t3.samples.portlets.AnnotationSamplePortlet</portlet-class>
 
       <supports>
          <mime-type>text/html</mime-type>
@@ -26,7 +26,7 @@
       <description>A sample portlet shows demo with Window State</description>
       <portlet-name>WindowStatePortlet</portlet-name>
       <display-name>Window State sample portlet</display-name>
-      <portlet-class>t3.samples.portlets.windowstate.WindowStatePortlet</portlet-class>
+      <portlet-class>t3.samples.portlets.WindowStatePortlet</portlet-class>
 
       <supports>
          <mime-type>text/html</mime-type>
@@ -46,7 +46,7 @@
       <description>Show CSS style definitions visually</description>
       <portlet-name>CSSDefinitionsPortlet</portlet-name>
       <display-name>CSS Definitions Portlet</display-name>
-      <portlet-class>t3.samples.portlets.css.CSSDefinitionsPortlet</portlet-class>
+      <portlet-class>t3.samples.portlets.CSSDefinitionsPortlet</portlet-class>
 
       <supports>
          <mime-type>text/html</mime-type>
@@ -65,7 +65,7 @@
       <description>A sample portlet for showing the setting markup head elements feature</description>
       <portlet-name>SettingMarkupHeadElementPortlet</portlet-name>
       <display-name>Setting Markup Head Element Portlet</display-name>
-      <portlet-class>t3.samples.portlets.markup.headers.SettingMarkupHeadElementPortlet</portlet-class>
+      <portlet-class>t3.samples.portlets.SettingMarkupHeadElementPortlet</portlet-class>
 
       <supports>
          <mime-type>text/html</mime-type>
@@ -104,7 +104,7 @@
    <portlet>
       <portlet-name>SharePublicRenderParametersPortlet</portlet-name>
       <display-name>Share Public Render Parameters Portlet</display-name>
-      <portlet-class>t3.samples.portlets.parameters.SharingPublicRenderParametersPortlet</portlet-class>
+      <portlet-class>t3.samples.portlets.SharingPublicRenderParametersPortlet</portlet-class>
 
       <supports>
          <mime-type>text/html</mime-type>
@@ -124,7 +124,7 @@
    <portlet>
       <portlet-name>ReceivePublicRenderParametersPortlet</portlet-name>
       <display-name>Receive Public Render Parameters Portlet</display-name>
-      <portlet-class>t3.samples.portlets.parameters.ReceivingPublicRenderParametersPortlet</portlet-class>
+      <portlet-class>t3.samples.portlets.ReceivingPublicRenderParametersPortlet</portlet-class>
 
       <supports>
          <mime-type>text/html</mime-type>
@@ -145,7 +145,7 @@
       <description>A sample portlet for showing usage of Portlet URL property</description>
       <portlet-name>URLPropertySamplePortlet</portlet-name>
       <display-name>URL Property Sample Portlet</display-name>
-      <portlet-class>t3.samples.portlets.properties.URLPropertySamplePortlet</portlet-class>
+      <portlet-class>t3.samples.portlets.URLPropertySamplePortlet</portlet-class>
 
       <supports>
          <mime-type>text/html</mime-type>
