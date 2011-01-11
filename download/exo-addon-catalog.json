@@ -1,0 +1,22 @@
+[
+    {
+        "id": "portlet-samples",
+        "version": "1.0.0",
+        "unstable": false,
+        "name": "286 compliant portlet samples",
+        "description": "A set of portlet sample that demonstrate portlet features",
+        "releaseDate": "2014-12-26T22:00:00.000Z",
+        "sourceUrl": "https://github.com/trongtt/286-compliant-portlet-samples",
+        "screenshotUrl": "",
+        "documentationUrl": "",
+        "downloadUrl": "https://trongtt.github.com/286-compliant-portlet-samples/download/portlet-samples.zip",
+        "vendor": "Trong, Tran The",
+        "author": "Trong, Tran The",
+        "license": "LGPLv3",
+        "licenseUrl": "https://www.gnu.org/licenses/lgpl-3.0.txt",
+        "mustAcceptLicense": false,
+        "supportedDistributions": "community,enterprise",
+        "supportedApplicationServers": "tomcat,jboss",
+        "compatibility": "[4.0.7,)"
+    }
+]
