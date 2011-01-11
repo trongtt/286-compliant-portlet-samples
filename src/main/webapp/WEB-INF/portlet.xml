@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<portlet-app version="1.0" xmlns="http://java.sun.com/xml/ns/portlet/portlet-app_2_0.xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+   xsi:schemaLocation="http://java.sun.com/xml/ns/portlet/portlet-app_2_0.xsd http://java.sun.com/xml/ns/portlet/portlet-app_2_0.xsd">
+
+   <portlet>
+      <description>A sample portlet implementation by using Annotation</description>
+      <portlet-name>AnnotationSamplePortlet</portlet-name>
+      <display-name>Annotation Sample Portlet</display-name>
+      <portlet-class>t3.samples.portlets.annotation.AnnotationSamplePortlet</portlet-class>
+
+      <supports>
+         <mime-type>text/html</mime-type>
+         <portlet-mode>VIEW</portlet-mode>
+         <portlet-mode>EDIT</portlet-mode>
+      </supports>
+
+      <supported-locale>en</supported-locale>
+
+      <portlet-info>
+         <title>A Portlet is implemented by Annotation</title>
+         <short-title>Annotated Portlet</short-title>
+      </portlet-info>
+   </portlet>
+
+   <portlet>
+      <description>A sample portlet shows demo with Window State</description>
+      <portlet-name>WindowStatePortlet</portlet-name>
+      <display-name>Window State sample portlet</display-name>
+      <portlet-class>t3.samples.portlets.windowstate.WindowStatePortlet</portlet-class>
+
+      <supports>
+         <mime-type>text/html</mime-type>
+         <portlet-mode>VIEW</portlet-mode>
+         <portlet-mode>EDIT</portlet-mode>
+      </supports>
+
+      <supported-locale>en</supported-locale>
+
+      <portlet-info>
+         <title>Window State demo portlet</title>
+         <short-title>Window State Portlet</short-title>
+      </portlet-info>
+   </portlet>
+
+   <portlet>
+      <description>Show CSS style definitions visually</description>
+      <portlet-name>CSSDefinitionsPortlet</portlet-name>
+      <display-name>CSS Definitions Portlet</display-name>
+      <portlet-class>t3.samples.portlets.css.CSSDefinitionsPortlet</portlet-class>
+
+      <supports>
+         <mime-type>text/html</mime-type>
+         <portlet-mode>VIEW</portlet-mode>
+      </supports>
+
+      <supported-locale>en</supported-locale>
+
+      <portlet-info>
+         <title>CSS Style Definitions</title>
+         <short-title>CSS Style</short-title>
+      </portlet-info>
+   </portlet>
+
+   <portlet>
+      <description>A sample portlet for showing the setting markup head elements feature</description>
+      <portlet-name>SettingMarkupHeadElementPortlet</portlet-name>
+      <display-name>Setting Markup Head Element Portlet</display-name>
+      <portlet-class>t3.samples.portlets.markup.headers.SettingMarkupHeadElementPortlet</portlet-class>
+
+      <supports>
+         <mime-type>text/html</mime-type>
+         <portlet-mode>VIEW</portlet-mode>
+         <portlet-mode>EDIT</portlet-mode>
+      </supports>
+
+      <supported-locale>en</supported-locale>
+
+      <portlet-info>
+         <title>Setting Markup Head Element Portlet</title>
+         <short-title>Markup headers</short-title>
+      </portlet-info>
+   </portlet>
+   
+   <!--  -->
+   
+   <portlet>
+      <portlet-name>QueryStringsInRequestDispatcherPathsPortlet</portlet-name>
+      <display-name>Query Strings in Request Dispatcher Paths</display-name>
+      <portlet-class>t3.samples.portlets.QueryStringsInRequestDispatcherPathsPortlet</portlet-class>
+
+      <supports>
+         <mime-type>text/html</mime-type>
+         <portlet-mode>VIEW</portlet-mode>
+      </supports>
+
+      <supported-locale>en</supported-locale>
+
+      <portlet-info>
+         <title>Query Strings in Request Dispatcher Paths</title>
+         <short-title>Query Strings in Request Dispatcher Paths</short-title>
+      </portlet-info>
+   </portlet>
+   
+   <portlet>
+      <portlet-name>SharePublicRenderParametersPortlet</portlet-name>
+      <display-name>Share Public Render Parameters Portlet</display-name>
+      <portlet-class>t3.samples.portlets.parameters.SharingPublicRenderParametersPortlet</portlet-class>
+
+      <supports>
+         <mime-type>text/html</mime-type>
+         <portlet-mode>VIEW</portlet-mode>
+      </supports>
+
+      <supported-locale>en</supported-locale>
+
+      <portlet-info>
+         <title>Implemented Portlet by Annotation</title>
+         <short-title>Annotated Portlet</short-title>
+      </portlet-info>
+
+      <supported-public-render-parameter>zip-id</supported-public-render-parameter>
+   </portlet>
+
+   <portlet>
+      <portlet-name>ReceivePublicRenderParametersPortlet</portlet-name>
+      <display-name>Receive Public Render Parameters Portlet</display-name>
+      <portlet-class>t3.samples.portlets.parameters.ReceivingPublicRenderParametersPortlet</portlet-class>
+
+      <supports>
+         <mime-type>text/html</mime-type>
+         <portlet-mode>VIEW</portlet-mode>
+      </supports>
+
+      <supported-locale>en</supported-locale>
+
+      <portlet-info>
+         <title>Implemented Portlet by Annotation</title>
+         <short-title>Annotated Portlet</short-title>
+      </portlet-info>
+
+      <supported-public-render-parameter>zip-id</supported-public-render-parameter>
+   </portlet>
+
+   <portlet>
+      <description>A sample portlet for showing usage of Portlet URL property</description>
+      <portlet-name>URLPropertySamplePortlet</portlet-name>
+      <display-name>URL Property Sample Portlet</display-name>
+      <portlet-class>t3.samples.portlets.properties.URLPropertySamplePortlet</portlet-class>
+
+      <supports>
+         <mime-type>text/html</mime-type>
+         <portlet-mode>VIEW</portlet-mode>
+      </supports>
+
+      <supported-locale>en</supported-locale>
+
+      <portlet-info>
+         <title>URL Property Sample Portlet</title>
+         <short-title>URL Property</short-title>
+      </portlet-info>
+   </portlet>
+
+   <public-render-parameter>
+      <identifier>zip-id</identifier>
+      <qname xmlns:x="http://sun.com/params">x:zip</qname>
+   </public-render-parameter>
+</portlet-app>
