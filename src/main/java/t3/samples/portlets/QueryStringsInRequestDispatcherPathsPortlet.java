@@ -33,7 +33,7 @@ public class QueryStringsInRequestDispatcherPathsPortlet extends GenericPortlet
 {
    public void doView(RenderRequest request, RenderResponse response) throws PortletException, IOException
    {
-      String path ="/portlets/view.jsp?message=Thank you!";
+      String path ="/portlets/QueryStringsInRequestDispatcherPathsPortlet/view.jsp?message=Thank you!";
 
       getPortletContext().getRequestDispatcher(path).include(request,response);
    }
