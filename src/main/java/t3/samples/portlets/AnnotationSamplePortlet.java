@@ -55,6 +55,14 @@ public class AnnotationSamplePortlet extends GenericPortlet
       PortletURL renderURL = response.createRenderURL();
       renderURL.setPortletMode(PortletMode.VIEW);
       w.write("<p> Click <a href=\"" + renderURL.toString() + "\">here</a> to switch to VIEW mode");
+      
+      PortletURL actionURL = response.createActionURL();
+      actionURL.setParameter(ActionRequest.ACTION_NAME, "sayhello");
+      w.write("<FORM METHOD=GET ACTION=\"" + actionURL.toString() + "\">");
+      w.write("town: <INPUT NAME=\"town\"><BR>");
+      w.write("<INPUT TYPE=SUBMIT>");
+      w.write("</FORM>");
+      w.write("Finished Form");
    }
    
    @ProcessAction(name = "sayhello")
