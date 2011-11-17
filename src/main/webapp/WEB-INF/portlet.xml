@@ -120,6 +120,24 @@
    </portlet>
 
    <portlet>
+      <portlet-name>RenderParametersPortlet</portlet-name>
+      <display-name>Render Parameters Portlet</display-name>
+      <portlet-class>t3.samples.portlets.RenderParametersPortlet</portlet-class>
+
+      <supports>
+         <mime-type>text/html</mime-type>
+         <portlet-mode>VIEW</portlet-mode>
+      </supports>
+
+      <supported-locale>en</supported-locale>
+
+      <portlet-info>
+         <title>Render Parameters Portlet</title>
+         <short-title>Render Parameters</short-title>
+      </portlet-info>
+   </portlet>
+
+   <portlet>
       <portlet-name>SharePublicRenderParametersPortlet</portlet-name>
       <display-name>Share Public Render Parameters Portlet</display-name>
       <portlet-class>t3.samples.portlets.SharingPublicRenderParametersPortlet</portlet-class>
@@ -175,6 +193,25 @@
       <portlet-info>
          <title>URL Property Sample Portlet</title>
          <short-title>URL Property</short-title>
+      </portlet-info>
+   </portlet>
+   
+   <portlet>
+      <description>A sample portlet for showing usage of Reserve Resource</description>
+      <portlet-name>ServeResourcePortlet</portlet-name>
+      <display-name>Serve Resource Portlet</display-name>
+      <portlet-class>t3.samples.portlets.ServeResourcePortlet</portlet-class>
+
+      <supports>
+         <mime-type>text/html</mime-type>
+         <portlet-mode>VIEW</portlet-mode>
+      </supports>
+
+      <supported-locale>en</supported-locale>
+
+      <portlet-info>
+         <title>Serve Resource Portlet</title>
+         <short-title>Serve Resource</short-title>
       </portlet-info>
    </portlet>
    

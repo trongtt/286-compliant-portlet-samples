@@ -2,7 +2,7 @@
 
 <web-app id="Jsr286EventListenerPortlet" version="2.4" xmlns="http://java.sun.com/xml/ns/j2ee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
    xsi:schemaLocation="http://java.sun.com/xml/ns/j2ee http://java.sun.com/xml/ns/j2ee/web-app_2_4.xsd">
-   <display-name>Jsr286EventListenerPortlet</display-name>
+   <display-name>286-compliant-portlet-samples</display-name>
 
    <!-- This for portlet registration in eXo Portal -->
    <listener>
@@ -17,6 +17,6 @@
       <servlet-name>PortletWrapper</servlet-name>
       <url-pattern>/PortletWrapper</url-pattern>
    </servlet-mapping>
-   <!--  -->
+   <!-- End -->
 
 </web-app>

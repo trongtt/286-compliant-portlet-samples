@@ -26,6 +26,7 @@ public class AnnotationSamplePortlet extends GenericPortlet
    public void renderViewMode(RenderRequest request, RenderResponse response) throws PortletException, IOException
    {
       response.setContentType("text/html");
+      response.setTitle("This is Annotation Sample portlet");
       PrintWriter w = response.getWriter();
       w.write("<div class=\"portlet-section-header\">This is VIEW mode of sample portlet that is implemented by using Annotation</div>");
 
@@ -36,6 +37,7 @@ public class AnnotationSamplePortlet extends GenericPortlet
       w.write("<br/>- " + ActionRequest.ACTION_NAME + " : sayhello" );
 
       PortletURL renderURL = response.createRenderURL();
+      renderURL.setParameter(ActionRequest.ACTION_NAME, "sayhello");
       renderURL.setPortletMode(PortletMode.EDIT);
       w.write("<p> Click <a href=\"" + renderURL.toString()
          + "\">here</a> to switch to EDIT mode");
