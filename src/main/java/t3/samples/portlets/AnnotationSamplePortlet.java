@@ -1,16 +1,12 @@
 package t3.samples.portlets;
 
-import t3.samples.portlets.util.RenderingUtils;
-
 import org.w3c.dom.Element;
-
 
 import java.io.IOException;
 import java.io.PrintWriter;
 
 import javax.portlet.ActionRequest;
 import javax.portlet.ActionResponse;
-import javax.portlet.GenericPortlet;
 import javax.portlet.MimeResponse;
 import javax.portlet.PortletException;
 import javax.portlet.PortletMode;
@@ -20,7 +16,7 @@ import javax.portlet.RenderMode;
 import javax.portlet.RenderRequest;
 import javax.portlet.RenderResponse;
 
-public class AnnotationSamplePortlet extends GenericPortlet
+public class AnnotationSamplePortlet extends AbstractSamplePortlet
 {
    @RenderMode(name = "view")
    public void renderViewMode(RenderRequest request, RenderResponse response) throws PortletException, IOException
@@ -44,7 +40,7 @@ public class AnnotationSamplePortlet extends GenericPortlet
       Element element = response.createElement("title");
       element.setTextContent("Hello the world 1");
       response.addProperty(MimeResponse.MARKUP_HEAD_ELEMENT, element);
-      RenderingUtils.renderRenderParemeters(request, response);
+      renderRenderParemeters(request, response);
    }
 
    @RenderMode(name = "edit")

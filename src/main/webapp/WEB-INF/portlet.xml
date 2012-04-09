@@ -214,7 +214,26 @@
          <short-title>Serve Resource</short-title>
       </portlet-info>
    </portlet>
-   
+
+   <portlet>
+      <description>Portlet Session demonstration</description>
+      <portlet-name>SessionAttributePortlet</portlet-name>
+      <display-name>Portlet Session</display-name>
+      <portlet-class>t3.samples.portlets.session.SessionAttributePortlet</portlet-class>
+
+      <supports>
+         <mime-type>text/html</mime-type>
+         <portlet-mode>VIEW</portlet-mode>
+      </supports>
+
+      <supported-locale>en</supported-locale>
+
+      <portlet-info>
+         <title>Portlet Session</title>
+         <short-title>Portlet Session</short-title>
+      </portlet-info>
+   </portlet>
+
    <filter>
       <filter-name>RenderFilterSample</filter-name>
       <filter-class>t3.samples.portlets.filters.RenderFilterSample</filter-class>

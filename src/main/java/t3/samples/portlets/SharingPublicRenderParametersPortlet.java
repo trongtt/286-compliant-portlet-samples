@@ -1,19 +1,16 @@
 package t3.samples.portlets;
 
-import t3.samples.portlets.util.RenderingUtils;
-
 import java.io.IOException;
 import java.io.PrintWriter;
 
 import javax.portlet.ActionRequest;
 import javax.portlet.ActionResponse;
-import javax.portlet.GenericPortlet;
 import javax.portlet.PortletException;
 import javax.portlet.PortletURL;
 import javax.portlet.RenderRequest;
 import javax.portlet.RenderResponse;
 
-public class SharingPublicRenderParametersPortlet extends GenericPortlet {
+public class SharingPublicRenderParametersPortlet extends AbstractSamplePortlet {
    
    @Override
    protected void doView(RenderRequest request, RenderResponse response) throws PortletException, IOException
@@ -33,7 +30,7 @@ public class SharingPublicRenderParametersPortlet extends GenericPortlet {
       renderURL.setParameter("param2", "value2");
       w.write("<p> Click <a href=\"" + renderURL.toString()
          + "\">here</a> to execute a Render URL");
-      RenderingUtils.renderRenderParemeters(request, response);
+      renderRenderParemeters(request, response);
    }
    
    @Override

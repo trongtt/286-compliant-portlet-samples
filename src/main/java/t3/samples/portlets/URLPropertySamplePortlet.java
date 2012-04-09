@@ -1,14 +1,11 @@
 package t3.samples.portlets;
 
-import t3.samples.portlets.util.RenderingUtils;
-
 import org.w3c.dom.Element;
 
 import java.io.IOException;
 import java.io.PrintWriter;
 
 import javax.portlet.ActionRequest;
-import javax.portlet.GenericPortlet;
 import javax.portlet.MimeResponse;
 import javax.portlet.PortletException;
 import javax.portlet.PortletMode;
@@ -16,7 +13,7 @@ import javax.portlet.PortletURL;
 import javax.portlet.RenderRequest;
 import javax.portlet.RenderResponse;
 
-public class URLPropertySamplePortlet extends GenericPortlet
+public class URLPropertySamplePortlet extends AbstractSamplePortlet
 {
    @Override
    protected void doView(RenderRequest request, RenderResponse response) throws PortletException, IOException
@@ -39,6 +36,6 @@ public class URLPropertySamplePortlet extends GenericPortlet
       Element element = response.createElement("title");
       element.setTextContent("Hello the world 1");
       response.addProperty(MimeResponse.MARKUP_HEAD_ELEMENT, element);
-      RenderingUtils.renderRenderParemeters(request, response);
+      renderRenderParemeters(request, response);
    }
 }
