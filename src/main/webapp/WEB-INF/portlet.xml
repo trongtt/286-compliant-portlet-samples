@@ -1,6 +1,81 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<portlet-app version="1.0" xmlns="http://java.sun.com/xml/ns/portlet/portlet-app_2_0.xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-   xsi:schemaLocation="http://java.sun.com/xml/ns/portlet/portlet-app_2_0.xsd http://java.sun.com/xml/ns/portlet/portlet-app_2_0.xsd">
+<portlet-app
+        version="1.0"
+        xmlns="http://java.sun.com/xml/ns/portlet/portlet-app_2_0.xsd"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://java.sun.com/xml/ns/portlet/portlet-app_2_0.xsd
+                            http://java.sun.com/xml/ns/portlet/portlet-app_2_0.xsd">
+
+
+    <portlet>
+        <description>Simplest portlet demonstration</description>
+        <portlet-name>SimplestPortlet</portlet-name>
+        <display-name>Simplest Portlet</display-name>
+        <portlet-class>t3.samples.portlets.MySimplestPortlet</portlet-class>
+        <supports>
+            <mime-type>text/html</mime-type>
+            <portlet-mode>VIEW</portlet-mode>
+        </supports>
+        <portlet-info>
+            <title>Simplest portlet</title>
+            <short-title>simplest-portlet</short-title>
+        </portlet-info>
+    </portlet>
+
+    <portlet>
+        <description>My event receiver sample portlet </description>
+        <portlet-name>MyEventReceiverSamplePortlet</portlet-name>
+        <display-name>My Event Receiver sample portlet</display-name>
+        <portlet-class>t3.samples.portlets.MyEventReceiverPortlet</portlet-class>
+        <supports>
+            <mime-type>text/html</mime-type>
+            <portlet-mode>VIEW</portlet-mode>
+        </supports>
+        <portlet-info>
+            <title>My Event receiver portlet</title>
+            <short-title>event-receiver</short-title>
+        </portlet-info>
+        <supported-processing-event>
+            <name>myTestEvent</name>
+        </supported-processing-event>
+    </portlet>
+
+    <portlet>
+        <description>My Public param Receiver portlet</description>
+        <portlet-name>MyPublicParamReceiverPortlet</portlet-name>
+        <display-name>My Public param receiver portlet</display-name>
+        <portlet-class>t3.samples.portlets.MyPublicRenderParamReceiverPortlet</portlet-class>
+        <supports>
+            <mime-type>text/html</mime-type>
+            <portlet-mode>VIEW</portlet-mode>
+        </supports>
+        <portlet-info>
+            <title>My Public param receiver portlet</title>
+            <short-title>param receiver portlet</short-title>
+        </portlet-info>
+        <supported-public-render-parameter>test_public_param</supported-public-render-parameter>
+    </portlet>
+
+    <portlet>
+        <description>My Annotation Sample portlet with even publishing and public render-params</description>
+        <portlet-name>MyAnnotationSamplePortlet</portlet-name>
+        <display-name>My Annotation sample portlet</display-name>
+        <portlet-class>t3.samples.portlets.MyAnnotationSamplePortlet</portlet-class>
+        <supports>
+            <mime-type>text/html</mime-type>
+            <portlet-mode>VIEW</portlet-mode>
+            <portlet-mode>EDIT</portlet-mode>
+        </supports>
+        <portlet-info>
+            <title>My Annotation sample portlet</title>
+            <short-title>annotation portlet</short-title>
+        </portlet-info>
+        <supported-publishing-event>
+            <name>myTestEvent</name>
+        </supported-publishing-event>
+        <supported-public-render-parameter>test_public_param</supported-public-render-parameter>
+    </portlet>
+
 
    <portlet>
       <description>A sample portlet implementation by using Annotation</description>
@@ -245,10 +320,23 @@
       <portlet-name>AnnotationSamplePortlet</portlet-name>
    </filter-mapping>
 
-   <public-render-parameter>
-      <identifier>zip-id</identifier>
-      <qname xmlns:x="http://sun.com/params">x:zip</qname>
-   </public-render-parameter>
 
+
+    <!--<default-namespace>http:example.com/events</default-namespace>-->
+    <event-definition>
+        <name>myTestEvent</name>
+        <value-type>java.lang.String</value-type>
+    </event-definition>
+
+    <public-render-parameter>
+        <identifier>zip-id</identifier>
+        <qname xmlns:x="http://sun.com/params">x:zip</qname>
+    </public-render-parameter>
+
+    <public-render-parameter>
+        <identifier>test_public_param</identifier>
+        <!--<qname xmlns:x="http://sun.com/params1">x:test_public_param</qname>-->
+        <name>test_public_param</name>
+    </public-render-parameter>
 
 </portlet-app>

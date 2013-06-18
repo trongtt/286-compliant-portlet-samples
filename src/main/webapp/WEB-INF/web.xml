@@ -5,9 +5,10 @@
    <display-name>286-compliant-portlet-samples</display-name>
 
    <!-- This for portlet registration in eXo Portal -->
-   <listener>
+
+   <!--<listener>
       <listener-class>org.exoplatform.services.portletcontainer.impl.servlet.PortletApplicationListener</listener-class>
-   </listener>
+   </listener>-->
 
    <servlet>
       <servlet-name>PortletWrapper</servlet-name>
