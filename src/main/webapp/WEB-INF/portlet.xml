@@ -1,342 +1,343 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<portlet-app
-        version="1.0"
-        xmlns="http://java.sun.com/xml/ns/portlet/portlet-app_2_0.xsd"
-        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-        xsi:schemaLocation="http://java.sun.com/xml/ns/portlet/portlet-app_2_0.xsd
+<portlet-app version="1.0" xmlns="http://java.sun.com/xml/ns/portlet/portlet-app_2_0.xsd"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://java.sun.com/xml/ns/portlet/portlet-app_2_0.xsd
                             http://java.sun.com/xml/ns/portlet/portlet-app_2_0.xsd">
 
+  <!-- Simple Portlet example -->
+  <portlet>
+    <description>Simple portlet demonstration</description>
+    <portlet-name>SimplePortlet</portlet-name>
+    <display-name>Simple Portlet</display-name>
+    <portlet-class>t3.samples.portlets.SimplePortlet</portlet-class>
 
-    <portlet>
-        <description>Simplest portlet demonstration</description>
-        <portlet-name>SimplestPortlet</portlet-name>
-        <display-name>Simplest Portlet</display-name>
-        <portlet-class>t3.samples.portlets.MySimplestPortlet</portlet-class>
-        <supports>
-            <mime-type>text/html</mime-type>
-            <portlet-mode>VIEW</portlet-mode>
-        </supports>
-        <portlet-info>
-            <title>Simplest portlet</title>
-            <short-title>simplest-portlet</short-title>
-        </portlet-info>
-    </portlet>
+    <supports>
+      <mime-type>text/html</mime-type>
+      <portlet-mode>VIEW</portlet-mode>
+    </supports>
+    <portlet-info>
+      <title>Simplest portlet</title>
+      <short-title>simplest-portlet</short-title>
+    </portlet-info>
+  </portlet>
+  <!-- End of Simple Portlet example -->
 
-    <portlet>
-        <description>My event receiver sample portlet </description>
-        <portlet-name>MyEventReceiverSamplePortlet</portlet-name>
-        <display-name>My Event Receiver sample portlet</display-name>
-        <portlet-class>t3.samples.portlets.MyEventReceiverPortlet</portlet-class>
-        <supports>
-            <mime-type>text/html</mime-type>
-            <portlet-mode>VIEW</portlet-mode>
-        </supports>
-        <portlet-info>
-            <title>My Event receiver portlet</title>
-            <short-title>event-receiver</short-title>
-        </portlet-info>
-        <supported-processing-event>
-            <name>myTestEvent</name>
-        </supported-processing-event>
-    </portlet>
+  <!-- Coordination Between Portlets - Events example -->
+  <portlet>
+    <description>Coordination Between Portlets - Events example</description>
+    <portlet-name>EventPublisherPortlet</portlet-name>
+    <display-name>Event Publisher Portlet</display-name>
+    <portlet-class>t3.samples.portlets.coordination.events.EventPublisherPortlet</portlet-class>
 
-    <portlet>
-        <description>My Public param Receiver portlet</description>
-        <portlet-name>MyPublicParamReceiverPortlet</portlet-name>
-        <display-name>My Public param receiver portlet</display-name>
-        <portlet-class>t3.samples.portlets.MyPublicRenderParamReceiverPortlet</portlet-class>
-        <supports>
-            <mime-type>text/html</mime-type>
-            <portlet-mode>VIEW</portlet-mode>
-        </supports>
-        <portlet-info>
-            <title>My Public param receiver portlet</title>
-            <short-title>param receiver portlet</short-title>
-        </portlet-info>
-        <supported-public-render-parameter>test_public_param</supported-public-render-parameter>
-    </portlet>
+    <supports>
+      <mime-type>text/html</mime-type>
+      <portlet-mode>VIEW</portlet-mode>
+    </supports>
 
-    <portlet>
-        <description>My Annotation Sample portlet with even publishing and public render-params</description>
-        <portlet-name>MyAnnotationSamplePortlet</portlet-name>
-        <display-name>My Annotation sample portlet</display-name>
-        <portlet-class>t3.samples.portlets.MyAnnotationSamplePortlet</portlet-class>
-        <supports>
-            <mime-type>text/html</mime-type>
-            <portlet-mode>VIEW</portlet-mode>
-            <portlet-mode>EDIT</portlet-mode>
-        </supports>
-        <portlet-info>
-            <title>My Annotation sample portlet</title>
-            <short-title>annotation portlet</short-title>
-        </portlet-info>
-        <supported-publishing-event>
-            <name>myTestEvent</name>
-        </supported-publishing-event>
-        <supported-public-render-parameter>test_public_param</supported-public-render-parameter>
-    </portlet>
+    <portlet-info>
+      <title>Event Publisher</title>
+      <short-title>event-publisher</short-title>
+    </portlet-info>
+
+    <supported-publishing-event>
+      <name>jsr286Events</name>
+    </supported-publishing-event>
+  </portlet>
+
+  <portlet>
+    <description>Coordination Between Portlets - Events example</description>
+    <portlet-name>EventReceiverPortlet</portlet-name>
+    <display-name>Event Receiver Portlet</display-name>
+    <portlet-class>t3.samples.portlets.coordination.events.EventReceiverPortlet</portlet-class>
+
+    <supports>
+      <mime-type>text/html</mime-type>
+      <portlet-mode>VIEW</portlet-mode>
+    </supports>
+
+    <portlet-info>
+      <title>Event Receiver</title>
+      <short-title>event-receiver</short-title>
+    </portlet-info>
+
+    <supported-processing-event>
+      <name>jsr286Events</name>
+    </supported-processing-event>
+  </portlet>
+  <!-- End of Coordination Between Portlets - Events example -->
+
+  <!-- Coordination Between Portlets - Public Render Params example -->
+  <portlet>
+    <description>Coordination Between Portlets - Public Render Parmas example</description>
+    <portlet-name>PublicRenderParamPublisherPortlet</portlet-name>
+    <display-name>Public Render Params Publisher Portlet</display-name>
+    <portlet-class>t3.samples.portlets.coordination.renderparam.PublicRenderParamPublisherPortlet</portlet-class>
+
+    <supports>
+      <mime-type>text/html</mime-type>
+      <portlet-mode>VIEW</portlet-mode>
+    </supports>
+
+    <portlet-info>
+      <title>Public Render Params Publisher</title>
+      <short-title>prp-publisher</short-title>
+    </portlet-info>
+
+    <supported-public-render-parameter>jsr286PublicRenderParam</supported-public-render-parameter>
+  </portlet>
+
+  <portlet>
+    <description>Coordination Between Portlets - Public Render Params example</description>
+    <portlet-name>PublicRenderParamsReceiverPortlet</portlet-name>
+    <display-name>Public Render Params Receiver Portlet</display-name>
+    <portlet-class>t3.samples.portlets.coordination.renderparam.PublicRenderParamsReceiverPortlet</portlet-class>
+
+    <supports>
+      <mime-type>text/html</mime-type>
+      <portlet-mode>VIEW</portlet-mode>
+    </supports>
+
+    <portlet-info>
+      <title>Public Render Params Receiver</title>
+      <short-title>prp-receiver</short-title>
+    </portlet-info>
+
+    <supported-public-render-parameter>jsr286PublicRenderParam</supported-public-render-parameter>
+  </portlet>
+  <!-- End of Coordination Between Portlets - Public Render Params example -->
+
+  <!-- Annotation Sample Portlet -->
+  <portlet>
+    <description>A sample portlet implementation by using Annotation</description>
+    <portlet-name>AnnotationSamplePortlet</portlet-name>
+    <display-name>Annotation Sample Portlet</display-name>
+    <portlet-class>t3.samples.portlets.annotation.AnnotationSamplePortlet</portlet-class>
+
+    <supports>
+      <mime-type>text/html</mime-type>
+      <portlet-mode>VIEW</portlet-mode>
+      <portlet-mode>EDIT</portlet-mode>
+    </supports>
+
+    <supported-locale>en</supported-locale>
+
+    <portlet-info>
+      <title>A Portlet is implemented by Annotation</title>
+      <short-title>Annotated Portlet</short-title>
+    </portlet-info>
+  </portlet>
+  <!-- End of Annotation Sample Portlet -->
+
+  <!-- Caching Portlet Example -->
+  <portlet>
+    <description>A sample portlet showing Caching feature</description>
+    <portlet-name>CachingPortlet</portlet-name>
+    <display-name>Caching Portlet</display-name>
+    <portlet-class>t3.samples.portlets.cache.CachingPortlet</portlet-class>
+
+    <expiration-cache>30</expiration-cache>
+
+    <supports>
+      <mime-type>text/html</mime-type>
+      <portlet-mode>VIEW</portlet-mode>
+    </supports>
+
+    <portlet-info>
+      <title>Caching Portlet</title>
+      <short-title>Caching Portlet</short-title>
+    </portlet-info>
+  </portlet>
+  <!-- End of Caching Portlet Example -->
+
+  <!-- CSS Definitions Portlet Example -->
+  <portlet>
+    <description>Show CSS style definitions visually</description>
+    <portlet-name>CSSDefinitionsPortlet</portlet-name>
+    <display-name>CSS Definitions Portlet</display-name>
+    <portlet-class>t3.samples.portlets.CSSDefinitionsPortlet</portlet-class>
+
+    <supports>
+      <mime-type>text/html</mime-type>
+      <portlet-mode>VIEW</portlet-mode>
+    </supports>
+
+    <supported-locale>en</supported-locale>
+
+    <portlet-info>
+      <title>CSS Style Definitions</title>
+      <short-title>CSS Style</short-title>
+    </portlet-info>
+  </portlet>
+  <!-- End of CSS Definitions Portlet Example -->
+
+  <!-- Window-State Portlet Example -->
+  <portlet>
+    <description>A sample portlet shows demo with Window State</description>
+    <portlet-name>WindowStatePortlet</portlet-name>
+    <display-name>Window State sample portlet</display-name>
+    <portlet-class>t3.samples.portlets.WindowStatePortlet</portlet-class>
+
+    <supports>
+      <mime-type>text/html</mime-type>
+      <portlet-mode>VIEW</portlet-mode>
+      <portlet-mode>EDIT</portlet-mode>
+    </supports>
+
+    <supported-locale>en</supported-locale>
+
+    <portlet-info>
+      <title>Window State demo portlet</title>
+      <short-title>Window State Portlet</short-title>
+    </portlet-info>
+  </portlet>
+  <!-- End of Window-State Portlet Example -->
+
+  <!-- Setting Markup Head Element Portlet Example -->
+  <portlet>
+    <description>A sample portlet for showing the setting markup head elements feature</description>
+    <portlet-name>SettingMarkupHeadElementPortlet</portlet-name>
+    <display-name>Setting Markup Head Element Portlet</display-name>
+    <portlet-class>t3.samples.portlets.SettingMarkupHeadElementPortlet</portlet-class>
+
+    <supports>
+      <mime-type>text/html</mime-type>
+      <portlet-mode>VIEW</portlet-mode>
+      <portlet-mode>EDIT</portlet-mode>
+    </supports>
+
+    <supported-locale>en</supported-locale>
+
+    <portlet-info>
+      <title>Setting Markup Head Element Portlet</title>
+      <short-title>Markup headers</short-title>
+    </portlet-info>
+  </portlet>
+  <!-- End of Setting Markup Head Element Portlet Example -->
+
+  <!-- Query Strings Portlet Example -->
+  <portlet>
+    <portlet-name>QueryStringsInRequestDispatcherPathsPortlet</portlet-name>
+    <display-name>Query Strings in Request Dispatcher Paths</display-name>
+    <portlet-class>t3.samples.portlets.QueryStringsInRequestDispatcherPathsPortlet</portlet-class>
+
+    <supports>
+      <mime-type>text/html</mime-type>
+      <portlet-mode>VIEW</portlet-mode>
+    </supports>
+
+    <supported-locale>en</supported-locale>
+
+    <portlet-info>
+      <title>Query Strings in Request Dispatcher Paths</title>
+      <short-title>Query Strings in Request Dispatcher Paths</short-title>
+    </portlet-info>
+  </portlet>
+  <!-- End of Query String Portlet Example -->
+
+  <!-- Render Parameter Portlet Example -->
+  <portlet>
+    <portlet-name>RenderParametersPortlet</portlet-name>
+    <display-name>Render Parameters Portlet</display-name>
+    <portlet-class>t3.samples.portlets.RenderParametersPortlet</portlet-class>
+
+    <supports>
+      <mime-type>text/html</mime-type>
+      <portlet-mode>VIEW</portlet-mode>
+    </supports>
+
+    <supported-locale>en</supported-locale>
+
+    <portlet-info>
+      <title>Render Parameters Portlet</title>
+      <short-title>Render Parameters</short-title>
+    </portlet-info>
+  </portlet>
+  <!-- End of Render Parameter Portlet Example -->
+
+  <!-- URLProperty Portlet Example -->
+  <portlet>
+    <description>A sample portlet for showing usage of Portlet URL property</description>
+    <portlet-name>URLPropertySamplePortlet</portlet-name>
+    <display-name>URL Property Sample Portlet</display-name>
+    <portlet-class>t3.samples.portlets.URLPropertySamplePortlet</portlet-class>
+
+    <supports>
+      <mime-type>text/html</mime-type>
+      <portlet-mode>VIEW</portlet-mode>
+    </supports>
+
+    <supported-locale>en</supported-locale>
+
+    <portlet-info>
+      <title>URL Property Sample Portlet</title>
+      <short-title>URL Property</short-title>
+    </portlet-info>
+  </portlet>
+  <!-- End of URLProperty Portlet Example -->
+  
+  <!-- Serve Resource Portlet Example -->
+  <portlet>
+    <description>A sample portlet for showing usage of Reserve Resource</description>
+    <portlet-name>ServeResourcePortlet</portlet-name>
+    <display-name>Serve Resource Portlet</display-name>
+    <portlet-class>t3.samples.portlets.ServeResourcePortlet</portlet-class>
+
+    <supports>
+      <mime-type>text/html</mime-type>
+      <portlet-mode>VIEW</portlet-mode>
+    </supports>
+
+    <supported-locale>en</supported-locale>
+
+    <portlet-info>
+      <title>Serve Resource Portlet</title>
+      <short-title>Serve Resource</short-title>
+    </portlet-info>
+  </portlet>
+  <!-- End of Serve Resource Portlet -->
+
+  <!-- Portlet Session Example -->
+  <portlet>
+    <description>Portlet Session demonstration</description>
+    <portlet-name>SessionAttributePortlet</portlet-name>
+    <display-name>Portlet Session</display-name>
+    <portlet-class>t3.samples.portlets.session.SessionAttributePortlet</portlet-class>
+
+    <supports>
+      <mime-type>text/html</mime-type>
+      <portlet-mode>VIEW</portlet-mode>
+    </supports>
+
+    <supported-locale>en</supported-locale>
+
+    <portlet-info>
+      <title>Portlet Session</title>
+      <short-title>Portlet Session</short-title>
+    </portlet-info>
+  </portlet>
+  <!-- End of Portlet Session Example -->
+
+  <filter>
+    <filter-name>RenderFilterSample</filter-name>
+    <filter-class>t3.samples.portlets.filters.RenderFilterSample</filter-class>
+    <lifecycle>RENDER_PHASE</lifecycle>
+  </filter>
+
+  <filter-mapping>
+    <filter-name>RenderFilterSample</filter-name>
+    <portlet-name>AnnotationSamplePortlet</portlet-name>
+  </filter-mapping>
 
 
-   <portlet>
-      <description>A sample portlet implementation by using Annotation</description>
-      <portlet-name>AnnotationSamplePortlet</portlet-name>
-      <display-name>Annotation Sample Portlet</display-name>
-      <portlet-class>t3.samples.portlets.AnnotationSamplePortlet</portlet-class>
 
-      <supports>
-         <mime-type>text/html</mime-type>
-         <portlet-mode>VIEW</portlet-mode>
-         <portlet-mode>EDIT</portlet-mode>
-      </supports>
+  <!--<default-namespace>http:example.com/events</default-namespace> -->
+  <event-definition>
+    <name>jsr286Events</name>
+    <value-type>java.lang.String</value-type>
+  </event-definition>
 
-      <supported-locale>en</supported-locale>
-
-      <portlet-info>
-         <title>A Portlet is implemented by Annotation</title>
-         <short-title>Annotated Portlet</short-title>
-      </portlet-info>
-   </portlet>
-   <portlet>
-      <description>A sample portlet showing Caching feature</description>
-      <portlet-name>CachingPortlet</portlet-name>
-      <display-name>Caching Portlet</display-name>
-      <portlet-class>t3.samples.portlets.CachingPortlet</portlet-class>
-
-      <expiration-cache>30</expiration-cache>
-      <supports>
-         <mime-type>text/html</mime-type>
-         <portlet-mode>VIEW</portlet-mode>
-         <portlet-mode>EDIT</portlet-mode>
-         <portlet-mode>HELP</portlet-mode>
-      </supports>
-      <portlet-info>
-         <title>Caching Portlet</title>
-         <short-title>Caching Portlet</short-title>
-      </portlet-info>
-
-   </portlet>
-   <portlet>
-      <description>A sample portlet shows demo with Window State</description>
-      <portlet-name>WindowStatePortlet</portlet-name>
-      <display-name>Window State sample portlet</display-name>
-      <portlet-class>t3.samples.portlets.WindowStatePortlet</portlet-class>
-
-      <supports>
-         <mime-type>text/html</mime-type>
-         <portlet-mode>VIEW</portlet-mode>
-         <portlet-mode>EDIT</portlet-mode>
-      </supports>
-
-      <supported-locale>en</supported-locale>
-
-      <portlet-info>
-         <title>Window State demo portlet</title>
-         <short-title>Window State Portlet</short-title>
-      </portlet-info>
-   </portlet>
-
-   <portlet>
-      <description>Show CSS style definitions visually</description>
-      <portlet-name>CSSDefinitionsPortlet</portlet-name>
-      <display-name>CSS Definitions Portlet</display-name>
-      <portlet-class>t3.samples.portlets.CSSDefinitionsPortlet</portlet-class>
-
-      <supports>
-         <mime-type>text/html</mime-type>
-         <portlet-mode>VIEW</portlet-mode>
-      </supports>
-
-      <supported-locale>en</supported-locale>
-
-      <portlet-info>
-         <title>CSS Style Definitions</title>
-         <short-title>CSS Style</short-title>
-      </portlet-info>
-   </portlet>
-
-   <portlet>
-      <description>A sample portlet for showing the setting markup head elements feature</description>
-      <portlet-name>SettingMarkupHeadElementPortlet</portlet-name>
-      <display-name>Setting Markup Head Element Portlet</display-name>
-      <portlet-class>t3.samples.portlets.SettingMarkupHeadElementPortlet</portlet-class>
-
-      <supports>
-         <mime-type>text/html</mime-type>
-         <portlet-mode>VIEW</portlet-mode>
-         <portlet-mode>EDIT</portlet-mode>
-      </supports>
-
-      <supported-locale>en</supported-locale>
-
-      <portlet-info>
-         <title>Setting Markup Head Element Portlet</title>
-         <short-title>Markup headers</short-title>
-      </portlet-info>
-   </portlet>
-
-   <!-- -->
-
-   <portlet>
-      <portlet-name>QueryStringsInRequestDispatcherPathsPortlet</portlet-name>
-      <display-name>Query Strings in Request Dispatcher Paths</display-name>
-      <portlet-class>t3.samples.portlets.QueryStringsInRequestDispatcherPathsPortlet</portlet-class>
-
-      <supports>
-         <mime-type>text/html</mime-type>
-         <portlet-mode>VIEW</portlet-mode>
-      </supports>
-
-      <supported-locale>en</supported-locale>
-
-      <portlet-info>
-         <title>Query Strings in Request Dispatcher Paths</title>
-         <short-title>Query Strings in Request Dispatcher Paths</short-title>
-      </portlet-info>
-   </portlet>
-
-   <portlet>
-      <portlet-name>RenderParametersPortlet</portlet-name>
-      <display-name>Render Parameters Portlet</display-name>
-      <portlet-class>t3.samples.portlets.RenderParametersPortlet</portlet-class>
-
-      <supports>
-         <mime-type>text/html</mime-type>
-         <portlet-mode>VIEW</portlet-mode>
-      </supports>
-
-      <supported-locale>en</supported-locale>
-
-      <portlet-info>
-         <title>Render Parameters Portlet</title>
-         <short-title>Render Parameters</short-title>
-      </portlet-info>
-   </portlet>
-
-   <portlet>
-      <portlet-name>SharePublicRenderParametersPortlet</portlet-name>
-      <display-name>Share Public Render Parameters Portlet</display-name>
-      <portlet-class>t3.samples.portlets.SharingPublicRenderParametersPortlet</portlet-class>
-
-      <supports>
-         <mime-type>text/html</mime-type>
-         <portlet-mode>VIEW</portlet-mode>
-      </supports>
-
-      <supported-locale>en</supported-locale>
-
-      <portlet-info>
-         <title>Implemented Portlet by Annotation</title>
-         <short-title>Annotated Portlet</short-title>
-      </portlet-info>
-
-      <supported-public-render-parameter>zip-id</supported-public-render-parameter>
-   </portlet>
-
-   <portlet>
-      <portlet-name>ReceivePublicRenderParametersPortlet</portlet-name>
-      <display-name>Receive Public Render Parameters Portlet</display-name>
-      <portlet-class>t3.samples.portlets.ReceivingPublicRenderParametersPortlet</portlet-class>
-
-      <supports>
-         <mime-type>text/html</mime-type>
-         <portlet-mode>VIEW</portlet-mode>
-      </supports>
-
-      <supported-locale>en</supported-locale>
-
-      <portlet-info>
-         <title>Implemented Portlet by Annotation</title>
-         <short-title>Annotated Portlet</short-title>
-      </portlet-info>
-
-      <supported-public-render-parameter>zip-id</supported-public-render-parameter>
-   </portlet>
-
-   <portlet>
-      <description>A sample portlet for showing usage of Portlet URL property</description>
-      <portlet-name>URLPropertySamplePortlet</portlet-name>
-      <display-name>URL Property Sample Portlet</display-name>
-      <portlet-class>t3.samples.portlets.URLPropertySamplePortlet</portlet-class>
-
-      <supports>
-         <mime-type>text/html</mime-type>
-         <portlet-mode>VIEW</portlet-mode>
-      </supports>
-
-      <supported-locale>en</supported-locale>
-
-      <portlet-info>
-         <title>URL Property Sample Portlet</title>
-         <short-title>URL Property</short-title>
-      </portlet-info>
-   </portlet>
-   
-   <portlet>
-      <description>A sample portlet for showing usage of Reserve Resource</description>
-      <portlet-name>ServeResourcePortlet</portlet-name>
-      <display-name>Serve Resource Portlet</display-name>
-      <portlet-class>t3.samples.portlets.ServeResourcePortlet</portlet-class>
-
-      <supports>
-         <mime-type>text/html</mime-type>
-         <portlet-mode>VIEW</portlet-mode>
-      </supports>
-
-      <supported-locale>en</supported-locale>
-
-      <portlet-info>
-         <title>Serve Resource Portlet</title>
-         <short-title>Serve Resource</short-title>
-      </portlet-info>
-   </portlet>
-
-   <portlet>
-      <description>Portlet Session demonstration</description>
-      <portlet-name>SessionAttributePortlet</portlet-name>
-      <display-name>Portlet Session</display-name>
-      <portlet-class>t3.samples.portlets.session.SessionAttributePortlet</portlet-class>
-
-      <supports>
-         <mime-type>text/html</mime-type>
-         <portlet-mode>VIEW</portlet-mode>
-      </supports>
-
-      <supported-locale>en</supported-locale>
-
-      <portlet-info>
-         <title>Portlet Session</title>
-         <short-title>Portlet Session</short-title>
-      </portlet-info>
-   </portlet>
-
-   <filter>
-      <filter-name>RenderFilterSample</filter-name>
-      <filter-class>t3.samples.portlets.filters.RenderFilterSample</filter-class>
-      <lifecycle>RENDER_PHASE</lifecycle>
-   </filter>
-
-   <filter-mapping>
-      <filter-name>RenderFilterSample</filter-name>
-      <portlet-name>AnnotationSamplePortlet</portlet-name>
-   </filter-mapping>
-
-
-
-    <!--<default-namespace>http:example.com/events</default-namespace>-->
-    <event-definition>
-        <name>myTestEvent</name>
-        <value-type>java.lang.String</value-type>
-    </event-definition>
-
-    <public-render-parameter>
-        <identifier>zip-id</identifier>
-        <qname xmlns:x="http://sun.com/params">x:zip</qname>
-    </public-render-parameter>
-
-    <public-render-parameter>
-        <identifier>test_public_param</identifier>
-        <!--<qname xmlns:x="http://sun.com/params1">x:test_public_param</qname>-->
-        <name>test_public_param</name>
-    </public-render-parameter>
-
+  <public-render-parameter>
+    <identifier>jsr286PublicRenderParam</identifier>
+    <name>jsr286PublicRenderParam</name>
+  </public-render-parameter>
 </portlet-app>
