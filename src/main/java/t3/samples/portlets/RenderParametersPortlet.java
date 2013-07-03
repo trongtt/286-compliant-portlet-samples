@@ -21,6 +21,7 @@ public class RenderParametersPortlet extends AbstractSamplePortlet {
    {
       System.out.println(request.getParameter("actionParam1"));
       System.out.println(request.getParameter("renderParam1"));
+      System.out.println(request.getParameter("testing"));
       response.setRenderParameter("renderParam2", "renderParamValue2");
       System.out.println("response.setRenderParameter(\"renderParam2\", \"renderParamValue2\");");
    }
