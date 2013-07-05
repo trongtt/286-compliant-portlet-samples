@@ -7,7 +7,7 @@
 
   <% System.out.println("\n\n RenderRequest :" + renderRequest); %>
 
-    <%= renderRequest.getParameter("message") %>
+    <%= request.getParameter("message") %>
 
     <br/>
 
