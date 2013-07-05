@@ -107,6 +107,25 @@
     </portlet-info>
   </portlet>
   <!-- End of Simple Portlet example -->
+  
+  <!-- Cookies portlet -->
+
+  <portlet>
+    <description>Cookies portlet</description>
+    <portlet-name>CookiesPortlet</portlet-name>
+    <display-name>Cookies Portlet</display-name>
+    <portlet-class>t3.samples.portlets.CookiesPortlet</portlet-class>
+
+    <supports>
+      <mime-type>text/html</mime-type>
+      <portlet-mode>VIEW</portlet-mode>
+    </supports>
+    <portlet-info>
+      <title>Cookies portlet</title>
+      <short-title>cookies-portlet</short-title>
+    </portlet-info>
+  </portlet>
+>>>>>>> 8e50e50... Add cookies porltet but it doesnt work for now
 
   <!-- Coordination Between Portlets - Events example -->
   <portlet>
