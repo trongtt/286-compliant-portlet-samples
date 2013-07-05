@@ -120,12 +120,35 @@
       <mime-type>text/html</mime-type>
       <portlet-mode>VIEW</portlet-mode>
     </supports>
+
     <portlet-info>
       <title>Cookies portlet</title>
       <short-title>cookies-portlet</short-title>
     </portlet-info>
   </portlet>
->>>>>>> 8e50e50... Add cookies porltet but it doesnt work for now
+  <!-- Action scope request attribute portlet  -->
+
+  <portlet>
+    <description>Action scope requet attribute portlet</description>
+    <portlet-name>ActionScopeRequestAttributesPortlet</portlet-name>
+    <display-name>Action scope requet attribute portlet</display-name>
+    <portlet-class>t3.samples.portlets.ActionScopeRequestAttributesPortlet</portlet-class>
+
+    <supports>
+      <mime-type>text/html</mime-type>
+      <portlet-mode>VIEW</portlet-mode>
+    </supports>
+
+    <portlet-info>
+      <title>ActionScopeRequestAttributesPortlet</title>
+      <short-title>action-request-request-attributes</short-title>
+    </portlet-info>
+    
+    <container-runtime-option>
+      <name>javax.portlet.actionScopedRequestAttributes</name>
+      <value>true</value>
+    </container-runtime-option>
+  </portlet>
 
   <!-- Coordination Between Portlets - Events example -->
   <portlet>
