@@ -21,6 +21,53 @@
     </portlet-info>
   </portlet>
   <!-- End of Simple Portlet example -->
+  
+  <!-- Cookies portlet -->
+
+  <portlet>
+    <description>Cookies portlet</description>
+    <portlet-name>CookiesPortlet</portlet-name>
+    <display-name>Cookies Portlet</display-name>
+    <portlet-class>t3.samples.portlets.CookiesPortlet</portlet-class>
+
+    <supports>
+      <mime-type>text/html</mime-type>
+      <portlet-mode>VIEW</portlet-mode>
+    </supports>
+
+    <portlet-info>
+      <title>Cookies portlet</title>
+      <short-title>cookies-portlet</short-title>
+    </portlet-info>
+    
+    <container-runtime-option>
+      <name>javax.portlet.renderHeaders</name>
+      <value>true</value>
+    </container-runtime-option>
+  </portlet>
+  <!-- Action scope request attribute portlet  -->
+
+  <portlet>
+    <description>Action scope requet attribute portlet</description>
+    <portlet-name>ActionScopeRequestAttributesPortlet</portlet-name>
+    <display-name>Action scope requet attribute portlet</display-name>
+    <portlet-class>t3.samples.portlets.ActionScopeRequestAttributesPortlet</portlet-class>
+
+    <supports>
+      <mime-type>text/html</mime-type>
+      <portlet-mode>VIEW</portlet-mode>
+    </supports>
+
+    <portlet-info>
+      <title>ActionScopeRequestAttributesPortlet</title>
+      <short-title>action-request-request-attributes</short-title>
+    </portlet-info>
+    
+    <container-runtime-option>
+      <name>javax.portlet.actionScopedRequestAttributes</name>
+      <value>true</value>
+    </container-runtime-option>
+  </portlet>
 
   <!-- Coordination Between Portlets - Events example -->
   <portlet>
@@ -253,27 +300,6 @@
     </portlet-info>
   </portlet>
   <!-- End of Render Parameter Portlet Example -->
-
-  <!-- URLProperty Portlet Example -->
-  <portlet>
-    <description>A sample portlet for showing usage of Portlet URL property</description>
-    <portlet-name>URLPropertySamplePortlet</portlet-name>
-    <display-name>URL Property Sample Portlet</display-name>
-    <portlet-class>t3.samples.portlets.URLPropertySamplePortlet</portlet-class>
-
-    <supports>
-      <mime-type>text/html</mime-type>
-      <portlet-mode>VIEW</portlet-mode>
-    </supports>
-
-    <supported-locale>en</supported-locale>
-
-    <portlet-info>
-      <title>URL Property Sample Portlet</title>
-      <short-title>URL Property</short-title>
-    </portlet-info>
-  </portlet>
-  <!-- End of URLProperty Portlet Example -->
   
   <!-- Serve Resource Portlet Example -->
   <portlet>
