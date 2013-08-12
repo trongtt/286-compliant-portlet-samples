@@ -171,25 +171,25 @@
   <!-- End of CSS Definitions Portlet Example -->
 
   <!-- Window-State Portlet Example -->
-  <portlet>
-    <description>A sample portlet shows demo with Window State</description>
-    <portlet-name>WindowStatePortlet</portlet-name>
-    <display-name>Window State sample portlet</display-name>
-    <portlet-class>t3.samples.portlets.WindowStatePortlet</portlet-class>
+   <portlet>
+      <description>State Information Portlet</description>
+      <portlet-name>StateInfoPortlet</portlet-name>
+      <display-name>State Info portlet</display-name>
+      <portlet-class>t3.samples.portlets.StateInfoPortlet</portlet-class>
 
-    <supports>
-      <mime-type>text/html</mime-type>
-      <portlet-mode>VIEW</portlet-mode>
-      <portlet-mode>EDIT</portlet-mode>
-    </supports>
+      <supports>
+         <mime-type>text/html</mime-type>
+         <portlet-mode>VIEW</portlet-mode>
+         <portlet-mode>EDIT</portlet-mode>
+      </supports>
 
-    <supported-locale>en</supported-locale>
+      <supported-locale>en</supported-locale>
 
-    <portlet-info>
-      <title>Window State demo portlet</title>
-      <short-title>Window State Portlet</short-title>
-    </portlet-info>
-  </portlet>
+      <portlet-info>
+         <title>Portlet State Information</title>
+         <short-title>Portlet State Info</short-title>
+      </portlet-info>
+   </portlet>
   <!-- End of Window-State Portlet Example -->
 
   <!-- Setting Markup Head Element Portlet Example -->

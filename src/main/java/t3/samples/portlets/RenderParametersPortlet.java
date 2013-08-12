@@ -37,7 +37,11 @@ public class RenderParametersPortlet extends AbstractSamplePortlet {
 
       portletURL = response.createRenderURL();
       portletURL.setParameter("renderParam1", "renderParamValue1");
-      writer.write("<br/>Click on an RenderURL : <a href=\"" + portletURL.toString() + "\">" + portletURL.toString() + "</a>");
+      writer.write("<p>Click on an RenderURL : <a href=\"" + portletURL.toString() + "\">" + portletURL.toString() + "</a>");
+      
+      portletURL = response.createRenderURL();
+      writer.write("<p>Click on an RenderURL : <a href=\"" + portletURL.toString() + "\">" + portletURL.toString() + "</a>");
+
       renderRenderParemeters(request, response);
    }
 }

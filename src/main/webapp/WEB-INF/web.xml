@@ -4,20 +4,4 @@
    xsi:schemaLocation="http://java.sun.com/xml/ns/j2ee http://java.sun.com/xml/ns/j2ee/web-app_2_4.xsd">
    <display-name>286-compliant-portlet-samples</display-name>
 
-   <!-- This for portlet registration in eXo Portal -->
-
-   <!--<listener>
-      <listener-class>org.exoplatform.services.portletcontainer.impl.servlet.PortletApplicationListener</listener-class>
-   </listener>-->
-
-   <servlet>
-      <servlet-name>PortletWrapper</servlet-name>
-      <servlet-class>org.exoplatform.services.portletcontainer.impl.servlet.ServletWrapper</servlet-class>
-   </servlet>
-   <servlet-mapping>
-      <servlet-name>PortletWrapper</servlet-name>
-      <url-pattern>/PortletWrapper</url-pattern>
-   </servlet-mapping>
-   <!-- End -->
-
 </web-app>
