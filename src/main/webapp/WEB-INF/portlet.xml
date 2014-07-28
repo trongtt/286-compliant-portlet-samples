@@ -309,6 +309,26 @@
       </portlet-info>
    </portlet>
 
+  <portlet>
+    <description>Portlet preference demonstration</description>
+    <portlet-name>SamplePreferencePortlet</portlet-name>
+    <display-name>Portlet Preference</display-name>
+    <portlet-class>t3.samples.portlets.SamplePreferencePortlet</portlet-class>
+
+    <supports>
+      <mime-type>text/html</mime-type>
+      <portlet-mode>VIEW</portlet-mode>
+      <portlet-mode>EDIT</portlet-mode>
+    </supports>
+
+    <supported-locale>en</supported-locale>
+
+    <portlet-info>
+      <title>Sample preference portlet</title>
+      <short-title>Sample preference</short-title>
+    </portlet-info>
+  </portlet>
+
    <filter>
       <filter-name>RenderFilterSample</filter-name>
       <filter-class>t3.samples.portlets.filters.RenderFilterSample</filter-class>
