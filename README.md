@@ -14,3 +14,4 @@ These samples are deployed and tested successfully in GateIn 3.5.0.Final. You co
 TODO:
 * Cookies example
 * Portlet Session example
+* ETag example
