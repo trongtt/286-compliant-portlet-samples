@@ -24,10 +24,14 @@ public class AnnotationSamplePortlet extends AbstractSamplePortlet
    public void renderViewMode(RenderRequest request, RenderResponse response) throws PortletException, IOException
    {
       response.setContentType("text/html");
+
+      // Set title for the page
       response.setTitle("This is Annotation Sample portlet");
       PrintWriter w = response.getWriter();
-      w.write("<div class=\"portlet-section-header\">This is VIEW mode of sample portlet that is implemented by using Annotation</div>");
 
+      // compose html to send to client
+      w.write("<div class=\"portlet-section-header\">This is VIEW mode of sample portlet that is implemented by using Annotation</div>");
+      w.write("<div>In this example, we are using Annotation for making methods for processing action and handling specific portlet mode in the render phase</div>");
       PortletURL actionURL = response.createActionURL();
       actionURL.setParameter(ActionRequest.ACTION_NAME, "sayhello");
       w.write("<p> Click <a href=\"" + actionURL.toString()
@@ -43,6 +47,11 @@ public class AnnotationSamplePortlet extends AbstractSamplePortlet
       element.setTextContent("Hello the world 1");
       response.addProperty(MimeResponse.MARKUP_HEAD_ELEMENT, element);
       renderRenderParemeters(request, response);
+
+      String path ="/portlets/annotation/view.jsp";
+
+      getPortletContext().getRequestDispatcher(path).include(request,response);
+
    }
 
    @RenderMode(name = "edit")
