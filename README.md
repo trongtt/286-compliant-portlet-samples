@@ -13,8 +13,9 @@ In general, you just need to deploy the [portlet-samples.war](http://trongtt.git
 
 ### eXo Add-on
 With eXo Platform portal, you can easily install this portlet samples as an eXo add-on by following command:
+```
 ./addon install portlet-samples --catalog=http://trongtt.github.io/286-compliant-portlet-samples/download/exo-addon-catalog.json
-
+```
 
 TODO:
 * Cookies example
